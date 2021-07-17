@@ -9,7 +9,6 @@ Created on Thu May 27 18:41:27 2021
 import pydicom
 import numpy as np
 import matplotlib.pylab as plt
-import imprimir_imagen as imp
 import os
 from PIL import Image
 
