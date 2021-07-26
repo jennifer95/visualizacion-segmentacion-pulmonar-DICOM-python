@@ -68,6 +68,7 @@ def extrac_matrix(slices):
     return image
 
 def remov_cama(image, y1 = 350 ,y2= 512):
+    '''Funcion que permite remover la camilla de un examen de TC'''
     for i in range(0,len(image)):
         image[i][y1:y2,:]=-1024
     return image
@@ -197,6 +198,16 @@ def visualizar_pantalla_mult(tipo_plano):
         visualizar_pantalla_mult_cor_fun(ruta_imagen, min_filas, nombre_img, 2000)
     elif tipo_plano == 'sagital':
         visualizar_pantalla_mult_sag_fun(ruta_imagen, min_filas, nombre_img, 2000)
+        
+def muestra_datos(stack, rows=5, cols=5, start_with=10, show_every=1, minimo = -100, maximo=300 ):
+    """Funcion que grafica las imágenes a partir de una matriz de 3 dimensiones"""
+    fig,ax = plt.subplots(rows,cols,figsize=[10,10])
+    for i in range(rows*cols):
+        ind = start_with + i*show_every
+        ax[int(i/rows),int(i % rows)].set_title('Corte %d' % ind)
+        ax[int(i/rows),int(i % rows)].imshow(stack[ind],cmap=plt.cm.gray, vmin=minimo, vmax=maximo)
+        ax[int(i/rows),int(i % rows)].axis('off')
+    plt.show()        
 
 
 
