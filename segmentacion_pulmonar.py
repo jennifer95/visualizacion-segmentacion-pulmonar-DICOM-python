@@ -40,7 +40,7 @@ def marcador_interno(imagen):
             marker_internal_labels[coordinates[0], coordinates[1]] = 0
 
     # Para cortes donde los pulmones y la tráquea tienen dimensiones similares         
-    elif len(areas) == 3  and areas[0] < 600 and areas[1] < 600 or areas[2] < 600 : # eliminamos la traquea
+    elif len(areas) == 3  and areas[0] < 600 and areas[1] < 600 and areas[2] < 600 : # eliminamos la traquea
         regiones = measure.regionprops(marker_internal_labels)
         coordenadas = [r.coords[0][0] for r in measure.regionprops(marker_internal_labels)] 
         coordenadas.sort() # ordenamos
