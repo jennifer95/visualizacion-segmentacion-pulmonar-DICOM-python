@@ -59,3 +59,29 @@ def marcador_interno(imagen):
 
     marker_internal = marker_internal_labels > 0
     return marker_internal
+
+def marcador_externo(imagen):
+    """Funcion que genera el marcador externo de un corte
+    """
+    marker_internal = marcador_interno(imagen[40])
+    external_a = ndimage.binary_dilation(marker_internal, iterations=10)
+    external_b = ndimage.binary_dilation(marker_internal, iterations=55)
+    marker_external = external_b ^ external_a
+    return marker_external
+
+def marcador_watershed(imagen):
+    """Funcion que genera el marcador watershed de un corte
+    """
+    marker_internal = marcador_interno(imagen)
+    marker_external = marcador_externo(imagen)
+    marker_watershed = np.zeros((512, 512), dtype=int)
+    marker_watershed += marker_internal * 255
+    marker_watershed += marker_external * 128
+
+
+
+    
+    
+    
+    
+    
