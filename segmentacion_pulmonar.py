@@ -60,16 +60,16 @@ def marcador_interno(imagen):
     marker_internal = marker_internal_labels > 0
     return marker_internal
 
-def marcador_externo(imagen):
+def marcador_externo(imagen, iterations_a=10, iterations_b=55):
     """Funcion que genera el marcador externo de un corte
     """
-    marker_internal = marcador_interno(imagen[40])
-    external_a = ndimage.binary_dilation(marker_internal, iterations=10)
-    external_b = ndimage.binary_dilation(marker_internal, iterations=55)
+    marker_internal = marcador_interno(imagen)
+    external_a = ndimage.binary_dilation(marker_internal, iterations=iterations_a)
+    external_b = ndimage.binary_dilation(marker_internal, iterations=iterations_b)
     marker_external = external_b ^ external_a
     return marker_external
 
-def marcador_watershed(imagen):
+def marcadores(imagen):
     """Funcion que genera el marcador watershed de un corte
     """
     marker_internal = marcador_interno(imagen)
@@ -77,7 +77,35 @@ def marcador_watershed(imagen):
     marker_watershed = np.zeros((512, 512), dtype=int)
     marker_watershed += marker_internal * 255
     marker_watershed += marker_external * 128
+    return marker_internal, marker_external, marker_watershed
 
+def seg_watershed(imagen,iterations_black = 6 ):
+    """Funcion para segmentar pulmones, mediante el ingreso de una imagen en escala de grises.
+    """
+    imagen_grad = image_gradiente(imagen)
+    marker_internal, marker_external, marker_watershed = marcadores(imagen)
+    watershed = segmentation.watershed(imagen_grad, marker_watershed)
+    outline = ndimage.morphological_gradient(watershed, size=(3,3))
+    outline = outline.astype(bool)
+    blackhat_struct = [[0, 0, 1, 1, 1, 0, 0],
+                        [0, 1, 1, 1, 1, 1, 0],
+                        [1, 1, 1, 1, 1, 1, 1],
+                        [1, 1, 1, 1, 1, 1, 1],
+                        [1, 1, 1, 1, 1, 1, 1],
+                        [0, 1, 1, 1, 1, 1, 0],
+                        [0, 0, 1, 1, 1, 0, 0]]
+    # creamos el elemento estructurante
+    blackhat_struct = ndimage.iterate_structure(blackhat_struct, iterations_black )
+    outline += ndimage.black_tophat(outline, structure = blackhat_struct)
+    lungfilter = np.bitwise_or(marker_internal, outline)
+    lungfilter = ndimage.morphology.binary_closing(lungfilter, structure=np.ones((5,5)), iterations=3)
+    segmented = np.where(lungfilter == 1, imagen, -2000*np.ones((512, 512)))
+    return segmented
+def seg_examen(ruta, interaciones):
+    imagen = imp.remov_cama(imp.extrac_matrix(imp.load_scan(ruta)))                       
+    segmentacion = np.stack([ seg_watershed(corte, 4) for corte in imagen]) 
+    segmentacion = segmentacion.astype(np.int16)
+    return segmentacion 
 
 
     
