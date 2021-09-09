@@ -1,0 +1,7 @@
+pydicom
+numpy
+matplotlib
+scipy
+pprintpp
+datetime3
+
