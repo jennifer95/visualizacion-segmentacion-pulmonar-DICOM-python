@@ -21,7 +21,7 @@
 <br />
 <p align="center">
   <a href="https://ciencias.epn.edu.ec/">
-    <img src="images/logo.png" alt="Logo" width="300">
+    <img src="imagenes/logo.png" alt="Logo" width="300">
   </a>
 
   <h3 align="center">Visualización-Segmentación-Pulmonar-Archivos-DICOM</h3>
