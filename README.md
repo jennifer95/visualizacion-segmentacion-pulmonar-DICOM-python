@@ -139,6 +139,9 @@ Link del Proyecto: [https://github.com/jennifer95/visualizacion-segmentacion-pul
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Agradecimientos
-* [Guido Zuidhof, Full preprocessing tutorial](https://www.kaggle.com/gzuidhof/full-preprocessing-tutorial)
-* [Ankasor, Improved lung segmentation using watershed](https://www.kaggle.com/ankasor/improved-lung-segmentation-using-watershed)
+
+El desarrollo de la herramienta de segmentación se fundamenta mayoritariamente en los códigos sitados a continuación:
+
+*  Guido Zuidhof, [Full preprocessing tutorial](https://www.kaggle.com/gzuidhof/full-preprocessing-tutorial)
+* Ankasor, [Improved lung segmentation using watershed](https://www.kaggle.com/ankasor/improved-lung-segmentation-using-watershed)
 
