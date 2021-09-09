@@ -53,7 +53,7 @@
       </ul>
     </li>
     <li>
-      <a href="#Empezando">Empezando</a>
+      <a href="#Requerimientos">Requerimientos</a>
       <ul>
         <li><a href="#prerequisitos">Prerequisitos</a></li>
         <li><a href="#instalación">Instalación</a></li>
@@ -93,7 +93,7 @@ Las herramientas usadas para este proyecto son:
 
 
 <!-- GETTING STARTED -->
-## Empezando
+## Requerimientos
 
 Para tener el ambiente adecuado para ejecutar el código sin errores se debe tener el software base descrito en prerequisitos y seguir los pasos que se muestran a continuación.
 
@@ -142,6 +142,6 @@ Link del Proyecto: [https://github.com/jennifer95/visualizacion-segmentacion-pul
 
 El desarrollo de la herramienta de segmentación se fundamenta mayoritariamente en los códigos sitados a continuación:
 
-*  Guido Zuidhof, [Full preprocessing tutorial](https://www.kaggle.com/gzuidhof/full-preprocessing-tutorial)
-* Ankasor, [Improved lung segmentation using watershed](https://www.kaggle.com/ankasor/improved-lung-segmentation-using-watershed)
+*  Guido Zuidhof, [Full preprocessing tutorial](https://www.kaggle.com/gzuidhof/full-preprocessing-tutorial).
+* Ankasor, [Improved lung segmentation using watershed](https://www.kaggle.com/ankasor/improved-lung-segmentation-using-watershed).
 
