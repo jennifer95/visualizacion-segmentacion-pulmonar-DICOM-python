@@ -128,6 +128,9 @@ Para tener el ambiente adecuado para ejecutar el código sin errores se debe ten
 <!-- CONTACT -->
 ## Contacto
 
+Si se desea involucrarse en el proyecto o contribuir al código, puede contactar a través de E-mail con los desarrolladores:
+
+
 Jennifer Ortega - jennifer.ortega@epn.edu.ec
 
 Project Link: [https://github.com/jennifer95/visualizacion-segmentacion-pulmonar-DICOM-python](https://github.com/jennifer95/visualizacion-segmentacion-pulmonar-DICOM-python)
