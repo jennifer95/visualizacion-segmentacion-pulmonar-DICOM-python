@@ -135,8 +135,8 @@ Para tener el ambiente adecuado para ejecutar el código sin errores se debe ten
 de las imágenes en diferentes planos anatómicos, mediante la utilización de archivos DICOM.
 
 - **Archivos de Python (.py):** 
-        1. **imprimir_imagen:** Archivo con todas las funciones que permiten leer e imprimir una imagen de TC a travéz de archivos DICOM.
-        2. **segmentacion_pulmonar:** Archivos con todas las funciones que permiten realizar una segmentación de pulmones de imágenes de TC de tórax. 
+   - **imprimir_imagen:** Archivo con todas las funciones que permiten leer e imprimir una imagen de TC a travéz de archivos DICOM.
+   - **segmentacion_pulmonar:** Archivos con todas las funciones que permiten realizar una segmentación de pulmones de imágenes de TC de tórax. 
 
 
 <!-- CONTACT -->
