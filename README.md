@@ -60,9 +60,6 @@
       </ul>
     </li>
     <li><a href="#Estructura-del-Proyecto">Estructura del Proyecto</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#Agradecimientos">Agradecimientos</a></li>
   </ol>
