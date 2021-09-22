@@ -120,7 +120,7 @@ Para tener el ambiente adecuado para ejecutar el código sin errores se debe ten
 
 - **Herramienta DICOM VISUALIZER:** En esta carpeta encontrará el código necesario para poder anonimizar archivos DICOM, además de que le permitirá leer la metada de imágenes de DICOM,  así como también exportar las imágenes en diferentes planos anatómicos.
  
-- **datos-torax-A:** Base de tados utilizada para el análisis y prueba de las diferentes herramientas creadas (Exámenes de TC de tórax).
+- **datos-torax-A:** Base de datos utilizada para el análisis y prueba de las diferentes herramientas creadas (Exámenes de TC de tórax).
 
 - **imagenes:** Carpeta con las imágenes generadas y utilizadas por los Notebooks y en el presente repositorio.
 
@@ -132,7 +132,7 @@ Para tener el ambiente adecuado para ejecutar el código sin errores se debe ten
 de las imágenes en diferentes planos anatómicos, mediante la utilización de archivos DICOM.
 
 - **Archivos de Python (.py):** 
-   - **imprimir_imagen:** Archivo con todas las funciones que permiten leer e imprimir una imagen de TC a travéz de archivos DICOM.
+   - **imprimir_imagen:** Archivo con todas las funciones que permiten leer e imprimir una imagen de TC a través de archivos DICOM.
    - **segmentacion_pulmonar:** Archivos con todas las funciones que permiten realizar una segmentación de pulmones de imágenes de TC de tórax. 
 
 
